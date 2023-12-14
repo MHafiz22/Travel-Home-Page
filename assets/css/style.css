@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yellowtail&display=swap");
+/* 
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Yellowtail', cursive;
+*/
+
+/* global var */
+:root {
+  --main-color: #fa7436;
+  --dark-first: #222222;
+  --dark-second: #444444;
+  --dark-third: #666666;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-first);
+}
+
+p {
+  color: var(--dark-third);
+}
+
+.container {
+  width: 100%;
+  max-width: 992px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.btn-main {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 0.2rem;
+  margin: 0 0.2rem;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  color: var(--main-color);
+  border-radius: 0.2rem;
+  margin: 0 0.2rem;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.btn-third {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  color: var(--main-color);
+  border-radius: 0.2rem;
+  margin: 0 0.2rem;
+  transition: 0.3s;
+}
+
+.btn-third:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* ======style====== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: "Yellowtail", cursive;
+  font-size: 2em;
+  color: var(--main-color);
+}
+
+nav .nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+nav .nav a {
+  text-decoration: none;
+  color: var(--dark-first);
+  padding: 0 2rem;
+  transition: 0.3s;
+}
+
+nav .nav a[data-active],
+nav .nav a:hover {
+  color: var(--main-color);
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+#home > div {
+  width: 50%;
+}
+
+#home h1 {
+  font-size: 4em;
+  line-height: 1em;
+  margin-bottom: 2rem;
+}
+
+#home h1 span {
+  color: var(--main-color);
+}
+
+#home img {
+  width: 100%;
+}
+
+#about {
+  background-color: #f7f8fc;
+}
+
+#about .container {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about h2 {
+  font-size: 2em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#about h2 span {
+  color: var(--main-color);
+}
+
+#about .desc {
+  width: 50%;
+  text-align: center;
+}
+
+#about .box-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#about .box {
+  width: 15rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#about .box img {
+  height: 48px;
+  object-fit: contain;
+}
+
+#about .box span {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+#biodata {
+  padding: 4rem 2rem;
+}
+
+#biodata .box {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 30rem;
+  background-color: var(--main-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  margin: auto;
+  transition: 0.3s;
+}
+
+#biodata .box:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+#biodata h2 {
+  font-size: 2em;
+  color: #fff;
+}
+
+#biodata img {
+  width: 12rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+#biodata td {
+  color: #fff;
+  /* font-size: 1.1em; */
+  letter-spacing: 0.1em;
+}
+
+footer {
+  background-color: #f7f8fc;
+  padding: 1rem 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* 
+  Break points : 1200, 992, 768, 576
+*/
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+
+  nav .nav a {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+
+  nav .cta {
+    display: none;
+  }
+
+  #home h1 {
+    font-size: 2.8em;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  #home {
+    flex-direction: column;
+  }
+
+  #home > div {
+    width: 100%;
+  }
+
+  #home h1 {
+    font-size: 4em;
+  }
+}
